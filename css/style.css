@@ -1,5 +1,36 @@
-body {
-    background-image: url("./images/001");
-    background-repeat: no-repeat;
-                background-size: cover;
-    {
+
+body  {
+    background-image: url(https://kastiya.com/wp-content/uploads/2016/07/web-background-images-hd-wallpapers-res-wallpaper-web-page-background-design-blue-pattern-white-cute-hijau-images-hd-wallpapers1-copy.jpg);
+ }
+ body {
+    
+    color: rgb(104, 20, 72);
+    font-family:cursive;
+    text-align: center;
+}
+
+#start{
+    text-align:start;
+}
+.center{
+    text-align:start;
+}
+main ul {
+    text-align: start;
+    margin-top: 20px;
+    list-style-position: inside;
+}
+
+main ol  {
+    text-align:start;
+    margin-top: 20px;
+}
+
+main h2  {
+    text-align:start;
+    margin-top: 20px;
+}
+header nav ul {
+    text-align:start;
+    margin-top: 20px;  
+}
