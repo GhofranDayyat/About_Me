@@ -1,14 +1,16 @@
-'use strict'
+'use strict';
 let userName = prompt('What is your Name?');
 confirm('Welcome ' + userName);
+confirm('Let\'s play a Guessing Game!');
 confirm('Please ' + userName + ' answer yes or No');
 let Q1 = prompt('Are you currently working?');
-
+let grade=0;
 switch (Q1.toUpperCase()) {
 case 'YES':
 case 'Y':
   alert('Good');
   console.log('Are you currently working?',Q1);
+  grade+=1;
   break;
 case 'NO':
 case 'N':
@@ -25,6 +27,7 @@ case 'YES':
 case 'Y':
   alert('Good');
   console.log('Do you have a laptop?', Q2);
+  grade+=1;
   break;
 case 'N':
 case 'NO':
@@ -41,6 +44,7 @@ case 'YES':
 case 'Y':
   alert('Good');
   console.log('Do you have a software background?', Q3);
+  grade+=1;
   break;
 case 'N':
 case 'NO':
@@ -57,6 +61,7 @@ case 'YES':
 case 'Y':
   alert('Amazing');
   console.log('Do you have a programming lean?', Q4);
+  grade+=1;
   break;
 case 'N':
 case 'NO':
@@ -69,41 +74,38 @@ default:
 }
 let Q5 = prompt('Do you have a bachelors degree?');
 switch (Q5.toUpperCase()) {
-  case 'YES':
-  case 'Y':
-    alert('It is better');
-    console.log('Do you have a bachelors degree?', Q5);
-    break;
-  case 'N':
-  case 'NO':
-    alert('Good luck');
-    console.log('Do you have a bachelors degree?', Q5);
-    break;
-  default:
-    console.log('Do you have a bachelors degree?', Q5);
-    break;
+case 'YES':
+case 'Y':
+  alert('It is better');
+  console.log('Do you have a bachelors degree?', Q5);
+  grade+=1;
+  break;
+case 'N':
+case 'NO':
+  alert('Good luck');
+  console.log('Do you have a bachelors degree?', Q5);
+  break;
+default:
+  console.log('Do you have a bachelors degree?', Q5);
+  break;
 }
 confirm('Welcome ' + userName);
 console.log('userName Answer', userName, Q1, Q2, Q3, Q4, Q5);
 
 
-confirm('Let\'s play a Guessing Game!');
 let oppo=3;
-let guessingAge=prompt('Guessing my Age');
-while(oppo ) {
-  if(guessingAge==23) {alert('Right answer');
-    break;}
-  while (guessingAge>=24){alert('Too High Guss');
-
-    oppo-=1;
-    guessingAge=prompt('please try again you have : ' +oppo+ 'remaining!');
+let guessingAge=prompt('Can you guess my age?');
+while(oppo) {
+  oppo-=1;
+  if(guessingAge==='23')
+  {alert('Right answer');
+    grade+=1;
     break;
-  }
-  while(guessingAge<=22) {alert('Too Low Guss');
-    oppo-=1;
-    guessingAge=prompt('please try again you have : ' +oppo+ 'remaining!');
-    break;
-  }
+  }else if(guessingAge>23){
+    alert('Too High Guss');
+  }else if(guessingAge<23){
+    alert('Too Low Guss');
+  }guessingAge=prompt('please try again you have : '+oppo+' remaining!');
 
 }
 confirm('my Age is 23 !');
@@ -122,12 +124,14 @@ while(attempts && !correct){
     if (userInput.toLowerCase()===mealsList[i] ) {
       alert('correct answer!');
       correct =true;
+      grade+=1;
       break;
     }
     attempts-=1;
     userInput=prompt('please try again you have : '+attempts+' remaining!');
   }
 }
-alert('correct answer is ' + ' mansaf '+ ' kabsa '+ ' pizza '+ ' kibbeh '+ ' maqluba');
+alert('The  meals list are: ' +mealsList);
+alert('Your garde is: '+grade);
 
-console.log('userInput',userInput, );
+console.log('userInput',userInput );
