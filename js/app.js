@@ -105,7 +105,10 @@ while(oppo) {
     alert('Too High Guss');
   }else if(guessingAge<23){
     alert('Too Low Guss');
-  }guessingAge=prompt('please try again you have : '+oppo+' remaining!');
+  
+  }
+  let res=oppo+1 ;
+  guessingAge=prompt('please try again you have : '+res +' remaining!');
 
 }
 confirm('my Age is 23 !');
