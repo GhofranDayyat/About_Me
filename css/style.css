@@ -17,8 +17,9 @@ body  {
 }
 main ul {
     text-align: start;
-    margin-top: 20px;
-    list-style-position: inside;
+    margin-top: 15px;
+    list-style-position:inside;
+    list-style:circle;
 }
 
 main ol  {
